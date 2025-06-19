@@ -5,20 +5,20 @@
 class Typ0 < Formula
   desc "A CLI typing practice tool"
   homepage "https://github.com/TusharIbtekar/go-typ0"
-  version "1.0.0"
+  version "1.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.0.0/go-typ0_Darwin_x86_64.tar.gz"
-      sha256 "86ecbdbe5ea14a4788ea1acb67dcdfea061e409934b0981582665eb7e156c942"
+      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.1.0/go-typ0_Darwin_x86_64.tar.gz"
+      sha256 "b5b2684d16c84d53011ca7dd3526b61458cff4a977f57ea9fce08a811e70ec5f"
 
       def install
         bin.install "typ0"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.0.0/go-typ0_Darwin_arm64.tar.gz"
-      sha256 "c37842bf946e981b72b83ef753e7fb3d3bfbe1297c13f81ee39a1409f4fc594f"
+      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.1.0/go-typ0_Darwin_arm64.tar.gz"
+      sha256 "3eec6895be3d33ff980df3f0505a04710c05bb4f489da95c93273a2fffdd2d03"
 
       def install
         bin.install "typ0"
@@ -28,33 +28,18 @@ class Typ0 < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.0.0/go-typ0_Linux_x86_64.tar.gz"
-      sha256 "6cdaf19bd192587167d9ec7c36176bc30838d560834f6e218f974a0bbd31db5b"
+      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.1.0/go-typ0_Linux_x86_64.tar.gz"
+      sha256 "c112ab1913a20858841309d9b3844d2135c1e26b240957302b84faef57582be8"
       def install
         bin.install "typ0"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.0.0/go-typ0_Linux_arm64.tar.gz"
-      sha256 "1e38eddc443b1bb02b265864061dd128633a1fe622717ae6a78bb41fb31e7553"
+      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.1.0/go-typ0_Linux_arm64.tar.gz"
+      sha256 "ee356aec612762745fba04c3e4b83f535fe4cb3552f69a7b2d2948209e488d95"
       def install
         bin.install "typ0"
       end
     end
-  end
-  def install
-    bin.install Dir["typ0-*"].first => "typ0"
-  end
-  
-  def post_install
-    puts "🏁 Welcome to Typ0!"
-    puts "Start typing: typ0 race"
-    puts "Show help: typ0 --help"
-    puts ""
-    puts "Happy typing! 🎯"
-  end
-  
-  test do
-    system "#{bin}/typ0", "--help"
   end
 end
