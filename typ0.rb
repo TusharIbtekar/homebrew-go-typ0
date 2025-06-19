@@ -42,4 +42,19 @@ class Typ0 < Formula
       end
     end
   end
+  def install
+    bin.install Dir["typ0-*"].first => "typ0"
+  end
+  
+  def post_install
+    puts "🏁 Welcome to Typ0!"
+    puts "Start typing: typ0 race"
+    puts "Show help: typ0 --help"
+    puts ""
+    puts "Happy typing! 🎯"
+  end
+  
+  test do
+    system "#{bin}/typ0", "--help"
+  end
 end
