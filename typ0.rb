@@ -5,20 +5,20 @@
 class Typ0 < Formula
   desc "A CLI typing practice tool"
   homepage "https://github.com/TusharIbtekar/go-typ0"
-  version "1.1.1"
+  version "1.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.1.1/go-typ0_Darwin_x86_64.tar.gz"
-      sha256 "5feebeca8211115a5fe1b145074464826de32be0015406c3fa533aef56bfa2a2"
+      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.1.2/go-typ0_Darwin_x86_64.tar.gz"
+      sha256 "db194f6347b220914c6e22e16144886a5fe2bfd570e5259444b58f83424310be"
 
       def install
         bin.install "typ0"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.1.1/go-typ0_Darwin_arm64.tar.gz"
-      sha256 "bbbbd9fe0e22ec6e1629073011d1707421a41d2c59fed751792580aac10baeb8"
+      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.1.2/go-typ0_Darwin_arm64.tar.gz"
+      sha256 "4991976eae80ca219e1dd77446eb7673ff74b0681f03fcbef4edd1a2cc46a246"
 
       def install
         bin.install "typ0"
@@ -28,15 +28,15 @@ class Typ0 < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.1.1/go-typ0_Linux_x86_64.tar.gz"
-      sha256 "b63557cea8e6159b668aca41d6093d2e80d2e482ff971d3f88d645040b7ca094"
+      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.1.2/go-typ0_Linux_x86_64.tar.gz"
+      sha256 "22429cefd94a836cfda876621b7fd116c0ca2d12bb6e144a7f7c4e13ebc035ce"
       def install
         bin.install "typ0"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.1.1/go-typ0_Linux_arm64.tar.gz"
-      sha256 "a3212e0d348ff7267d88413d1a8f3148975addb2a4c238ba01a53aea2b281baa"
+      url "https://github.com/TusharIbtekar/go-typ0/releases/download/v1.1.2/go-typ0_Linux_arm64.tar.gz"
+      sha256 "36f1af5329208f156dde3443aa2199623517e98b5d477c968f897ce9a31a5e3d"
       def install
         bin.install "typ0"
       end
